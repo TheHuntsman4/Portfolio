@@ -1,0 +1,421 @@
+* {
+    color: white;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-family: "Source Code Pro", monospace;
+  }
+  
+  body{
+    margin-right: 3rem;
+    margin-left: 3rem;
+    background-color: #0A0909;
+    overflow-x: hidden;
+  }
+  
+  .header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 20px rgb(83, 80, 80);
+    background-color: #151418;
+    border-radius: 10rem;
+    
+  }
+  
+  .foo{
+    padding-right: 4rem;
+  }
+  
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #0A0909;
+    border-radius: 10rem;
+    
+  }
+
+  .menu {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 7px 15px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    transition: 0.2s all ease-in-out;
+    color: #fff;
+  }
+  .nav-list-element:hover{
+    border-style: hidden hidden solid hidden;
+    border-radius: 3px;
+  }
+  .menu:hover a {
+    opacity: 0.4;
+  }
+  
+  .menu a:hover {
+    opacity: 1;
+    color: #069590;
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  #menu-toggle:checked ~ .menu {
+    transform: scale(1, 1);
+    
+  }
+  @media only screen and (max-width: 950px) {
+  
+  
+    nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    body{
+      overflow-x: hidden;
+    }
+      .menu {
+      flex-direction: column;
+      align-items: start;
+      position: absolute;
+      top: 100%;
+      left: 0px;
+      width: 100%;
+      margin:auto;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: transform 0.3s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+  
+    .menu a {
+      margin-left: 12px;
+    }
+  
+    .menu li {
+      margin-bottom: 10px;
+    }
+  
+  }  
+
+  .section-heading{
+    color: white;
+    font-weight: 500;
+    font-size: 4rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+
+
+  /* LANDING SECTION */
+  .landing{
+    padding-top: 3rem;
+    height: 100vh;
+  }
+  :root {
+    --background-rgb: 29 30 34;
+    
+    --green-rgb: 6 149 144;
+    --primary-rgb: var(--green-rgb);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  .screen {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    border: 3px solid rgb(var(--primary-rgb) / 80%);
+    aspect-ratio: 10 / 16;
+    border-radius: 1rem;
+    background-color: rgb(var(--primary-rgb) / 15%);
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .screen:after,
+  .screen:before {
+    content: "";
+    height: 5px;
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    translate: -50% 0%;
+    background-color: white;
+  }
+  
+  .screen:before {
+    width: 15%;
+    top: 0rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  
+  .screen:after {
+    width: 25%;
+    bottom: 0rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+  
+   @keyframes pan-overlay {
+    from {
+      background-position: 0% 0%;
+    }
+    
+    to {
+      background-position: 0% -100%;
+    }
+  } 
+  
+   .screen-overlay {     
+    background-size: 100% 9px;
+    height: 100%;
+    width: 100%;
+    animation: pan-overlay 22s infinite linear;
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    top: 0px;
+  } 
+  
+  @keyframes pan-image {  
+    0% {
+      background-position: 36% 42%;
+      background-size: 200%;
+    }
+    
+    20% {
+      background-position: 30% 35%;
+      background-size: 200%;
+    }
+    
+    20.0001% { /* -- View 2 -- */
+      background-position: 60% 85%;
+      background-size: 100%;
+    }
+    
+    60% {
+      background-position: 84% 33%;
+      background-size: 300%;
+    }
+    
+    60.0001% { /* -- View 4 -- */
+      background-position: 0% 0%;
+      background-size: 300%;
+    }
+    
+    80% {
+      background-position: 15% 4%;
+      background-size: 300%;
+    }
+    
+    80.0001% { 
+      background-position: 80% 10%;
+      background-size: 300%;
+    }
+    
+    100% {
+      background-position: 72% 14%;
+      background-size: 300%;
+    }
+  }
+  
+  .screen > .screen-image {
+    background-image: url("../assets/hero/Vector\ \(1\).png");
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    background-size: 300%;
+    background-position: 0% 0%;
+    filter: sepia(100%) hue-rotate(160deg);
+    opacity: 1 ;
+    animation: pan-image 15s linear infinite;
+  }
+  
+  .screen > .screen-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    gap: 4rem;
+    position: relative;
+    z-index: 3;
+    margin: 1rem;
+    padding-bottom: 6rem;
+    border: 1px solid rgb(var(--primary-rgb) / 50%);
+    border-radius: 0.6rem;
+  }
+  
+  .screen > .screen-content > .screen-icon {
+    color: white;
+    font-size: 4rem;
+    text-shadow: 0px 0px 0.5rem white;
+  }
+  
+  .screen > .screen-content > .screen-user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+  }
+  
+  .screen > .screen-content > .screen-user:before,
+  .screen > .screen-content > .screen-user:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    background-color: rgb(var(--primary-rgb));
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px 3px rgb(var(--primary-rgb) / 60%);
+  }
+  
+  .screen > .screen-content > .screen-user:before {
+    height: 2px;
+    width: 50px;
+    translate: -20px -1rem;
+    opacity: 0.75;
+  }
+  
+  .screen > .screen-content > .screen-user:after {
+    height: 3px;
+    width: 30px;
+    translate: 26px calc(-1rem - 0.5px);
+  }
+  
+  .screen > .screen-content > .screen-user > :is(.name, .link) {
+    font-family: "Source Code Pro", monospace;
+    color: white; 
+    text-align: center;
+    text-transform: uppercase; 
+  }
+  
+  .screen > .screen-content > .screen-user > .name {
+    position: relative;
+    font-size: 3rem;
+    font-weight: 200;
+  }
+
+  .screen > .screen-content > .screen-user > .name-title{
+    font-family: "Source Code Pro", monospace;
+    position: relative;
+    font-size: 3.4rem;
+    font-weight: 400;
+    color:#069590;
+  }
+  
+  .screen > .screen-content > .screen-user > .name:before,
+  .screen > .screen-content > .screen-user > .name:after {
+    content: "";
+    height: 4px;
+    width: 4px;
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 2px;
+  }
+  
+  .screen > .screen-content > .screen-user > .name:before {
+    top: 55%;
+    right: -1.5rem;
+  }
+  
+  .screen > .screen-content > .screen-user > .name:after {
+    top: 45%;
+    left: -1.5rem;  
+  }
+  
+  .screen > .screen-content > .screen-user > .link {  
+    opacity: 0.8;
+    font-size: 1.5rem;
+    text-shadow: 0px 0px 0.5rem white;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    text-decoration: none;
+  }
+  
+  .screen > .screen-content > .screen-user > .link:is(:hover, :focus) {  
+    text-decoration: underline; 
+  }
+  
+  @media(max-width: 700px) {
+    .screen {
+      margin-bottom: 0rem;
+      width: 100vw;
+    }
+    .landing{
+      width: 100vw;
+    }
+  }
+
+  .about-grid{
+    /* display: grid;
+    grid-template-columns: repeat(2,1fr); */
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+
+  }
+  
+.about-grid-hero{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-grid-content{
+  font-family: "Source Code Pro", monospace;
+  width: 100%;
+  color: white;
+}
+
+.about-grid-content-text{
+  font-family: "Source Code Pro", monospace;
+  color: white;
+  font-size: 2.3rem;
+  
+}
+
+.about-grid-content-important{
+  font-family: "Source Code Pro", monospace;
+  color: #069590;
+  font-size: 2.6rem;
+  font-weight: bold;
+  
+}
+
+@media (max-width: 700px) {
+  .about-grid{
+display: flex;
+flex-direction: column;
+  }
+}

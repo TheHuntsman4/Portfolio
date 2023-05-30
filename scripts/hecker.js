@@ -25,28 +25,9 @@ document.querySelectorAll("li").forEach(li => {
         clearInterval(interval);
       }
 
-      iteration += 1 / 3;
-    }, 50);
+      iteration += 1/3 ;
+    }, 30);
   });
 
   intervals.push(interval);
 });
-
-
-$('.card-text-wrapper').click(function() {
-  clickToExapndCards($(this));
-});
-
-function clickToExapndCards($obj){
-  var clickedElement = $obj;
-  if (clickedElement.hasClass('expanded')) {
-    clickedElement.find('.card-text').hide('slow');
-    clickedElement.removeClass('expanded');
-  } else {
-     clickedElement.find('.card-text').show('slow');
-    clickedElement.addClass('expanded');
-  }
-  
-};
-
-  
