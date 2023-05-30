@@ -125,6 +125,15 @@
     text-align: center;
   }
 
+  .section-blurb{
+   font-family: 'Inconsolata', monospace;
+   color: #069590;
+   font-size: 2rem;
+   font-weight: 800;
+   text-align: center;
+   padding: 3rem;
+  }
+
 
   /* LANDING SECTION */
   .landing{
@@ -202,47 +211,7 @@
     top: 0px;
   } 
   
-  @keyframes pan-image {  
-    0% {
-      background-position: 36% 42%;
-      background-size: 200%;
-    }
-    
-    20% {
-      background-position: 30% 35%;
-      background-size: 200%;
-    }
-    
-    20.0001% { /* -- View 2 -- */
-      background-position: 60% 85%;
-      background-size: 100%;
-    }
-    
-    60% {
-      background-position: 84% 33%;
-      background-size: 300%;
-    }
-    
-    60.0001% { /* -- View 4 -- */
-      background-position: 0% 0%;
-      background-size: 300%;
-    }
-    
-    80% {
-      background-position: 15% 4%;
-      background-size: 300%;
-    }
-    
-    80.0001% { 
-      background-position: 80% 10%;
-      background-size: 300%;
-    }
-    
-    100% {
-      background-position: 72% 14%;
-      background-size: 300%;
-    }
-  }
+
   
   .screen > .screen-image {
     background-image: url("../assets/hero/Vector\ \(1\).png");
@@ -253,7 +222,8 @@
     z-index: 1;
     left: 0px;
     top: 0px;
-    background-size: 300%;
+    background-size: 100%;
+    object-fit: cover;
     background-position: 0% 0%;
     filter: sepia(100%) hue-rotate(160deg);
     opacity: 1 ;
@@ -376,9 +346,13 @@
     }
   }
 
+  /* ABOUT SECTION */
+
+  .about{
+    height: 100vh;
+  }
+
   .about-grid{
-    /* display: grid;
-    grid-template-columns: repeat(2,1fr); */
     display: flex;
     justify-content: center;
     align-items:center ;
@@ -418,4 +392,40 @@
 display: flex;
 flex-direction: column;
   }
+}
+
+/* SKLLS SECTION */
+
+.skills-grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  align-self: center;
+  justify-self: center;
+  grid-gap: 1rem;
+}
+.skills-box{
+  height: auto;
+  width:100%;
+  background-color: #0A0909;
+  border-radius: 24px;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  padding:1rem
+}
+
+.skills-box-flex{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-box-content{
+  text-align:center;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.2rem;
+}
+
+.skills-box-content-stack{
+  display: flex;
+  justify-content: space-around;
 }
