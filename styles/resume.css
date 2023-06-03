@@ -1,5 +1,49 @@
 body{
-    background-color: white;
-    color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #E2D1D1;
+    color: rgb(39, 36, 36);
+    font-family: 'Inknut Antiqua', serif;
+    margin: 12px;
+    overflow-x:hidden;
+}
+
+.rectangle{
+    height: 16px;
+    width: 19%;
+    background-color: #F17C7C;
+}
+
+.main-heading{
+    text-align:center;
+}
+
+.contact-info{
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: flex-start;   
+}
+
+.contanct-info-element-img{
+    height: 2rem;
+    width: 2rem;
+}
+
+.education-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.education-title > h2{
+    padding-left: 1rem;
+}
+
+.education-content{
+    display: grid;
+    grid-template-columns: 10% 100%;
+    gap:3rem;
+    padding: 0 1rem 0 0;
 }
