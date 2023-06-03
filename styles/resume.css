@@ -65,3 +65,15 @@ body{
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
+
+.list-element{
+    color: rgb(39, 36, 36);
+}
+
+a{
+    text-decoration: none;
+    color:rgb(39, 36, 36) ;
+}
+a:hover{
+    color:white;
+}
