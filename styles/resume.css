@@ -28,7 +28,7 @@ body{
     width: 2rem;
 }
 
-.education-title{
+[class*="title"] {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -36,8 +36,7 @@ body{
     font-size: 1rem;
     font-weight: bold;
 }
-
-.education-title > h2{
+[class*="title"] > h2{
     padding-left: 1rem;
 }
 
@@ -46,4 +45,23 @@ body{
     grid-template-columns: 10% 100%;
     gap:3rem;
     padding: 0 1rem 0 0;
+}
+
+.experience-content{
+    display: grid;
+    grid-template-columns: 10% 100%;
+    gap:3rem;
+    padding: 0 1rem 0 0;
+}
+
+.experience-content-text {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.education-content-place {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
