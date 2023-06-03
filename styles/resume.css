@@ -77,3 +77,9 @@ a{
 a:hover{
     color:white;
 }
+
+.technical-grid{
+    display: grid;
+    grid-template-columns: 10% 100%;
+    gap:3rem;
+}
