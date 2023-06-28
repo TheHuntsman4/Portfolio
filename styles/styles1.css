@@ -139,7 +139,7 @@
 
   .section-blurb{
    font-family: 'Inconsolata', monospace;
-   color: #069590;
+   color: rgb(6, 149, 144);
    font-size: 2rem;
    font-weight: 800;
    text-align: center;
@@ -503,79 +503,70 @@ flex-direction: column;
 
 
 /* EDUCATION SECTION */
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto:400,700');
 
-body { font-family: Helvetica; }
-
-.education-timeline {
-  width: 300px;
-  margin: auto;
+body {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-.education-timeline-element {
-  border-top: 5px dashed;
-  border-color: #069590 !important;
-  margin:0; padding: 30px;
-  counter-increment: section;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: .5em;
+}
+
+.timeline-container > p {
+  font-family: 'Roboto', sans-serif;
+  font-size: .8rem;
+}
+
+.timeline-container {
+  max-width: 1024px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  padding: 3em 2em 2em;
   position: relative;
+  color: rgba(255, 255, 255, 0.7);
+  border-left: 2px solid rgba(6, 149, 144, 0.7);
 }
 
+.timeline-item p {
+  font-size: 1rem;
+}
 
-
-.education-timeline-element:nth-child(even):before {
-  content: counter(section);
-  right: 100%; 
-  margin-right: -20px;
+.timeline-item::before {
+  content: attr(date-is);
   position: absolute;
-  border-radius: 50%;
-  padding: 10px;
-  height: 20px;
-  width: 20px;
-  background-color: #069590;
-  text-align:center;
-  color: white;
-  font-size: 110%;
+  left: 2em;
+  font-weight: bold;
+  top: 1em;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: .785rem;
 }
 
-.education-timeline-element:nth-child(odd):before {
-  content: counter(section);
-  left: 100%; 
-  margin-left: -20px;
+.timeline-item::after {
+  width: 10px;
+  height: 10px;
+  display: block;
+  top: 1em;
   position: absolute;
-  border-radius: 50%;
-  padding: 10px;
-  height: 20px;
-  width: 20px;
-  background-color: #069590;
-  text-align:center;
-  color: white;
-  font-size: 110%;
+  left: -7px;
+  border-radius: 10px;
+  content: '';
+  border: 2px solid rgba(6, 149, 144, 0.7);
+  background: white;
 }
 
-
-
-.education-timeline-element:nth-child(even) {
-  border-left: 5px dashed;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-  margin-right: 30px; 
-  padding-right: 0;
+.timeline-item:last-child {
+  border-image: linear-gradient(to bottom, rgba(6, 149, 144, 0.7) 60%, rgba(255, 255, 255, 0)) 1 100%;
 }
 
-.education-timeline-element:nth-child(odd) {
-  border-right: 5px dashed;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  margin-left: 30px; 
-  padding-left: 0;
-}
-
-.education-timeline-element:first-child {
-  border-top: 0;
-  border-top-right-radius:0;
-  border-top-left-radius:0;
-}
-
-.education-timeline-element:last-child {
-  border-bottom-right-radius:0;
-  border-bottom-left-radius:0;
-}
