@@ -575,3 +575,35 @@ h1 {
   border-image: linear-gradient(to bottom, rgba(6, 149, 144, 0.7) 60%, rgba(255, 255, 255, 0)) 1 100%;
 }
 
+/* PROJECTS SECTION */
+
+.projects-box{
+  height: auto;
+  width:100%;
+  background-color: #0A0909;
+  border-radius: 24px;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  padding:1rem;
+  transition: background-image 0.8s ease-in-out, opacity 0.5s ease-in-out;
+  background-image: none;
+  opacity: 1;
+}
+
+.projects-box:nth-child(1):hover{
+  background-image: url("../assets/projects/Screenshot\ from\ 2023-06-28\ 16-51-31.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+.projects-box:nth-child(2):hover{
+  background-image: url("../assets/projects/Screenshot\ from\ 2023-06-28\ 17-06-52.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+.projects-box:nth-child(3):hover{
+  background-image: url("../assets/hero/Vector_\(2\).png");
+  opacity: 0.4;
+}
