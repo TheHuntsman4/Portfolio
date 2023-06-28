@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto:400,700');
 * {
     color: white;
     box-sizing: border-box;
@@ -59,7 +60,7 @@
   .menu a {
     display: block;
     padding: 7px 15px;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     font-weight: 500;
     transition: 0.2s all ease-in-out;
     color: #fff;
@@ -132,13 +133,14 @@
   .section-heading{
     color: white;
     font-weight: 500;
-    font-size: 4rem;
+    font-size: 3rem;
     font-family:'Helvetica';
     text-align: center;
+    overflow:clip;
   }
 
   .section-blurb{
-   font-family: 'Inconsolata', monospace;
+   font-family: "Source Code Pro", monospace;
    color: rgb(6, 149, 144);
    font-size: 2rem;
    font-weight: 800;
@@ -521,7 +523,7 @@ h1 {
 
 .timeline-container > p {
   font-family: 'Roboto', sans-serif;
-  font-size: .8rem;
+  font-size: 1rem;
 }
 
 .timeline-container {
@@ -550,7 +552,7 @@ h1 {
   display: block;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  font-size: .785rem;
+  font-size: .85rem;
 }
 
 .timeline-item::after {
