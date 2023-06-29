@@ -608,3 +608,78 @@ h1 {
   background-image: url("../assets/hero/Vector_\(2\).png");
   opacity: 0.4;
 }
+
+.landing{
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/hero/Achilles\ __\ The\ Trojan\ War\ Hero\ 1\ \(1\).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size:400%;
+  background-position: 60% 50%;
+  filter: contrast(0%);
+  filter:saturate(0%);
+  filter:brightness(100%);
+}
+
+.landing-content{
+  margin-top: 4rem;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.landing-text{
+  font-size: 1rem;
+  text-align: center;
+}
+
+.landing-name{
+  font-size: 1.25rem;
+  color:#069590;
+  text-align: center;
+}
+
+.landing-button-grid{
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  grid-gap: 2rem;
+}
+
+.landing-button{
+  background-color: #069590;
+  padding: 0.5rem;
+  border-radius: 10%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.landing-button:hover {
+  color: black;
+  background-color: #5accb3;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px){
+  .landing{
+    margin-top: 2rem;
+    background-size: auto;
+    height: 90vh;
+  }
+
+  .landing-content{
+    margin-top: 5rem;
+  }
+  .landing-text{
+    font-size: 3rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  .landing-name{
+    font-size: 4rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
